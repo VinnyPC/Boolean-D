@@ -116,7 +116,7 @@ public class VinniProjeto {
 				}
 			}
 			
-			IMC = imcDados[0]+imcDados[1];
+			IMC = imcDados[0]/(imcDados[1]*2);
 			
 			System.out.printf("\nSeu IMC é: "+IMC);
 			
