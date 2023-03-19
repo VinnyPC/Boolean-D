@@ -6,9 +6,10 @@ public class VinniProjeto {
 
 	public static void main(String[] args) {
 
-		int opcao = 0,i;
+		int opcao = 0, i;
 		float num1, num2, resultado = 0;
-		String confirm="n", operacao = "+", nomeUsuario;
+		String confirm = "n", operacao = "+", nomeUsuario,idadeUsuario,sexo;
+		float imcDados[] = new float[2],IMC;
 
 		Scanner read = new Scanner(System.in);
 
@@ -21,15 +22,19 @@ public class VinniProjeto {
 
 		while (confirm.equalsIgnoreCase("n")) {
 			System.out.println("1 - Calculadora");
-			System.out.println("2 - Gerador de Tabuada");
+			System.out.println("2 - Calculadora de IMC");
+			System.out.println("3 - Gerador de Tabuada");
+
 			opcao = read.nextInt();
-			
+
 			read.nextLine();
 
 			System.out.println("Você escolheu " + opcao + ".");
 			System.out.println("\nDigite S para confirmar e N para voltar e escolher outra operação.");
 			confirm = read.nextLine();
 		}
+
+		// calculadora
 
 		if (opcao == 1) {
 			System.out.println("Primeiro, preciso que use seu teclado para selecionar um numero correspondente \n"
@@ -77,16 +82,57 @@ public class VinniProjeto {
 			}
 
 			System.out.println("O resultado de " + num1 + " " + operacao + " " + num2 + " é " + resultado);
-			
-		}else if (opcao == 2) {
-			System.out.println("\nBem vindo ao gerador de tabuadas!\nDigite o número:");
-			num1 = read.nextFloat();
-			
-			for(i=1;i<=10;i++) {
-				resultado = num1 * i;
-				System.out.println(num1+ " * "+i+""+" = "+resultado);
+
+			// calculadora--fim
+
+		} else if (opcao == 2) {
+
+			System.out.println("\nBem vindo a calculadora de IMC! ");
+
+			for (i = 0; i < 2; i++) {
+				switch (i) {
+
+				case 0:
+					System.out.println("\nDigite a idade: ");
+					idadeUsuario = read.nextLine();
+					break;
+				case 1:
+					System.out.println("\nDigite seu sexo: ");
+					sexo = read.nextLine();
+					break;
+				
+				}
+			}
+			for(i = 0; i < 2; i++) {
+				switch(i){
+			case 0:
+				System.out.println("\nDigite seu peso: ");
+				imcDados[i] = read.nextFloat();
+				break;
+			case 1:
+				System.out.println("\nDigite sua altura: ");
+				imcDados[i] = read.nextFloat();
+				break;
+				}
 			}
 			
+			IMC = imcDados[0]+imcDados[1];
+			
+			System.out.printf("\nSeu IMC é: "+IMC);
+			
+			
+			
+			
+
+		} else if (opcao == 3) {
+			System.out.println("\nBem vindo ao gerador de tabuadas!\nDigite o número:");
+			num1 = read.nextFloat();
+
+			for (i = 1; i <= 10; i++) {
+				resultado = num1 * i;
+				System.out.println(num1 + " * " + i + "" + " = " + resultado);
+			}
+
 		}
 	}
 }
