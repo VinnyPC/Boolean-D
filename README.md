@@ -1,5 +1,5 @@
 # README - VinniProjeto
-Este é um projeto desenvolvido para aplicar os conhecimentos adquiridos durante uma semana de treinamento na Generation Brasil. Foi desenvolvido para fins educacionais e pode ser usado como um ponto de partida para o desenvolvimento de projetos mais complexos.
+Este é um projeto desenvolvido para aplicar os conhecimentos adquiridos durante essa semana de treinamento na Generation Brasil. Foi desenvolvido para fins educacionais e pode ser usado como um ponto de partida para o desenvolvimento de projetos mais complexos.
 
 O código é um programa em Java que oferece três opções de funcionalidade ao usuário:
 
